@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 import Header from './components/Header/Header'
 import Moviecontainer from './components/Moviecontainer/Moviecontainer';
