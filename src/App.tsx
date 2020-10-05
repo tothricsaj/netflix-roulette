@@ -7,9 +7,7 @@ function App() {
     <ErrorBoundary>
       <div className="App">
         <header className="App-header">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
+          <h2>Netflix Roulette</h2>
           <a
             className="App-link"
             href="https://reactjs.org"
