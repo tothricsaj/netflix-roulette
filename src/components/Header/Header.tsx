@@ -8,6 +8,9 @@ interface Props {
 const Header: React.FC<Props> = (props) => {
     return (
         <div className="header">
+            <div className="header_cover">
+                <div className="header_cover--black"></div>
+            </div>
             <p className="header_logo">
                 <span>netflix</span><span>roulette</span>
             </p>
