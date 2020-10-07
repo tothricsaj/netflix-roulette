@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.button {
+    padding: 5px;
+    border: unset;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button--magenta {
+    background-color: $magentaPink;
+    color: white;
+}
+
+.button-grey {
+    background-color: $grey1;
+}
+
+.input {
+    padding: 10px;
+    border: unset;
+    border-radius: 5px;
+    color: white;
+}
+
+.input--darkGrey {
+    background-color: $darkGrey;
+}
