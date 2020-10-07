@@ -18,6 +18,13 @@
     background-color: $grey1;
 }
 
+.button--slector {
+    background-color: transparent;
+    font-weight: normal;
+    color: white;
+    border-radius: 0;
+}
+
 .input {
     padding: 10px;
     border: unset;
@@ -27,4 +34,9 @@
 
 .input--darkGrey {
     background-color: $darkGrey;
+}
+
+.selectorButton {
+    text-transform: uppercase;
+    color: white;
 }

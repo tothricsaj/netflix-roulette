@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.moviecontainer {
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    padding: 20px;
+    background-color: $darkGrey;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $grey2;
+
+        .moviecontainer_typeSelector {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .current {
+                border-bottom: 3px solid $magentaPink;
+            }
+        }
+
+        .moviecontainer_sortSelector {
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            label {
+                color: $grey2;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .moviecontainer_movieList {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
