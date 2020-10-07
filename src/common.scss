@@ -6,6 +6,7 @@
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button--magenta {
@@ -13,7 +14,7 @@
     color: white;
 }
 
-.button-grey {
+.button--grey {
     background-color: $grey1;
 }
 
