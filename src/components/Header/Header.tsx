@@ -17,16 +17,19 @@ const Header: React.FC<Props> = (props) => {
 
             <button className="header_addMovieButton">+ add movie</button>
 
-            <h2 className="header_title">Find your movie</h2>
+            <div className="header_searchWrapper">
+                <h2 className="header_title">Find your movie</h2>
+                <div className="header_searchWrapper_inputContainer">
+                    <input
+                        className="header_input"
+                        type="text"
+                        placeholder="What do you want to watch?" />
 
-            <input
-                className="header_input"
-                type="text"
-                placeholder="What do you want to watch?" />
-
-            <button className="header_searchButton">
-                Search
-            </button>
+                    <button className="header_searchButton">
+                        Search
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

@@ -4,14 +4,13 @@
     width: 100%;
     height: 300px;
     position: relative;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
     .header_cover {
         width: 100%;
         height: 100%;
-        background-image: url(/static/media/moviecover.5057d8cc.jpeg);
+        background-image: url(moviecover.jpeg);
         filter: blur(2px);
         z-index: -1;
 
@@ -26,7 +25,47 @@
         @include absoluteToTopLeft
     }
 
-    .header_logo {}
+    .header_logo {
+        position: absolute;
+        top: 20px;
+        left: 60px;
+    }
+
+    .header_addMovieButton {
+        position: absolute;
+        top: 20px;
+        right: 60px;
+    }
+
+    .header_searchWrapper {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h2 {
+                margin-top: 0;
+            }
+
+        .header_searchWrapper_inputContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: calc(80% - 10px);
+                margin-right: 10px;
+            }
+
+            button {
+                width: 20%;
+            }
+        }
+    }
 }
 
 
