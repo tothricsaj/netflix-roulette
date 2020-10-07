@@ -1,4 +1,24 @@
+@import '../../variables.scss';
 @import '../../mixins.scss';
+
+.button {
+    padding: 5px;
+    border: unset;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button--magenta {
+    background-color: $magentaPink;
+    color: white;
+}
+
+.button-grey {
+    background-color: $grey1;
+}
+
+
 
 .header {
     width: 100%;
@@ -29,12 +49,19 @@
         position: absolute;
         top: 20px;
         left: 60px;
+
+        color: $magentaPink;
+
+        span {font-weight: bold;}
     }
 
     .header_addMovieButton {
         position: absolute;
         top: 20px;
         right: 60px;
+        background-color: grey2;
+        color: $magentaPink;
+        
     }
 
     .header_searchWrapper {

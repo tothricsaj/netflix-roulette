@@ -12,10 +12,10 @@ const Header: React.FC<Props> = (props) => {
                 <div className="header_cover--black"></div>
             </div>
             <p className="header_logo">
-                <span>netflix</span><span>roulette</span>
+                <span>netflix</span>roulette
             </p>
 
-            <button className="header_addMovieButton">+ add movie</button>
+            <button className="button button--grey header_addMovieButton">+ add movie</button>
 
             <div className="header_searchWrapper">
                 <h2 className="header_title">Find your movie</h2>
@@ -25,7 +25,7 @@ const Header: React.FC<Props> = (props) => {
                         type="text"
                         placeholder="What do you want to watch?" />
 
-                    <button className="header_searchButton">
+                    <button className="button button--magenta header_searchButton">
                         Search
                     </button>
                 </div>
