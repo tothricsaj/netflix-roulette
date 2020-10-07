@@ -21,7 +21,7 @@ const Header: React.FC<Props> = (props) => {
                 <h2 className="header_title">Find your movie</h2>
                 <div className="header_searchWrapper_inputContainer">
                     <input
-                        className="header_input"
+                        className="header_input input input--darkGrey"
                         type="text"
                         placeholder="What do you want to watch?" />
 

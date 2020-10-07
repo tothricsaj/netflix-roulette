@@ -18,6 +18,15 @@
     background-color: $grey1;
 }
 
+.input {
+    padding: 10px;
+    border: unset;
+    border-radius: 5px;
+}
+
+.input--darkGrey {
+    background-color: $darkGrey;
+}
 
 
 .header {
@@ -59,7 +68,7 @@
         position: absolute;
         top: 20px;
         right: 60px;
-        background-color: grey2;
+        background-color: $grey2;
         color: $magentaPink;
         
     }
@@ -75,6 +84,9 @@
 
         h2 {
                 margin-top: 0;
+                text-transform: uppercase;
+                color: white;
+                font-weight: normal;
             }
 
         .header_searchWrapper_inputContainer {
@@ -90,6 +102,7 @@
 
             button {
                 width: 20%;
+                height: 35px;
             }
         }
     }
