@@ -3,3 +3,11 @@
     top: 0;
     left: 0;
 }
+
+@mixin absoluteByArgument($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}

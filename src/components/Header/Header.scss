@@ -27,9 +27,11 @@
     }
 
     .header_logo {
-        position: absolute;
-        top: 20px;
-        left: 60px;
+        // position: absolute;
+        // top: 20px;
+        // left: 60px;
+
+        @include absoluteByArgument(20px, unset, unset, 60px);
 
         color: $magentaPink;
 
@@ -37,9 +39,12 @@
     }
 
     .header_addMovieButton {
-        position: absolute;
-        top: 20px;
-        right: 60px;
+        // position: absolute;
+        // top: 20px;
+        // right: 60px;
+
+        @include absoluteByArgument(20px, 60px);
+
         color: $magentaPink;
         
     }
