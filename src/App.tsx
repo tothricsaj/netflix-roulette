@@ -3,9 +3,10 @@ import './App.scss';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 import Header from './components/Header/Header'
 import Moviecontainer from './components/Moviecontainer/Moviecontainer';
+import {Movie} from './common/types/movie'
 
 function App() {
-  const [movieList, setMovieList] = useState<Array<object>>([
+  const [movieList, setMovieList] = useState<Movie[]>([
     {
       title: 'Pulp Ficiton',
       releaseDate: 1992,

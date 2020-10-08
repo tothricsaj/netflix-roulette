@@ -1,22 +1,22 @@
 import * as React from 'react'
 import './Movieitem.scss'
+import { Movie } from '../../common/types/movie';
 
 interface Props {
-    title: string,
-    releaseDate: number,
-    type: string,
-    coverImagePath: string
+    movie: Movie
 }
 
 const Movieitem: React.FC<Props> = (props) => {
     return (
         <div className="movieitem">
             <div className="dotIcon"></div>
-            <div className="movieitem_coverImage"></div>
+            <div 
+                className="movieitem_coverImage"
+            ></div>
             <div className="movieitem_infoBox">
-                <p className="title">Test Title</p>
-                <p className="releaseDate">Test date</p>
-                <p className="movieType">Test tpye</p>
+                <p className="title">{props.movie.title}</p>
+                <p className="releaseDate">{props.movie.releaseDate}</p>
+                <p className="movieType">{props.movie.type}</p>
             </div>
         </div>
     )

@@ -1,28 +1,14 @@
 import * as React from 'react'
 import Movieitem from '../Movieitem/Movieitem';
 import './Moviecontainer.scss'
+import { Movie } from '../../common/types/movie';
+import App from '../../App';
 
 interface Props {
-    movieList: {
-        title: string,
-        releaseDate: number,
-        type: string,
-        coverImagePath: string
-    }[]
+    movieList: Movie[]
 }
 
 const Moviecontainer: React.FC<Props> = (props) => {
-    const movieItems = props.movieList.map((el: object, i) => {
-        console.log(el.title)
-
-        return <Movieitem 
-            title={el.title}
-            releaseDate={el.releaseDate}
-            type={el.type}
-            coverImagePath={el.coverImagePath}
-        />
-    })
-
     return (
         <div className="moviecontainer">
             <header>
@@ -44,6 +30,15 @@ const Moviecontainer: React.FC<Props> = (props) => {
             </header>
             <div className="moviecontainer_resultCount">39 movie found</div>
             <div className="moviecontainer_movieList">
+                {
+                    props.movieList.map((el, i) => {
+                        console.log(el.title)
+
+                        return <Movieitem 
+                            movie={el}
+                        />
+                    })
+                }
             </div>
         </div>
     )
