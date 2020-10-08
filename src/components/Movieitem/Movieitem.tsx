@@ -2,7 +2,10 @@ import * as React from 'react'
 import './Movieitem.scss'
 
 interface Props {
-
+    title: string,
+    releaseDate: number,
+    type: string,
+    coverImagePath: string
 }
 
 const Movieitem: React.FC<Props> = (props) => {
