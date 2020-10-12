@@ -11,25 +11,31 @@ function App() {
       title: 'Pulp Ficiton',
       releaseDate: 1992,
       type: 'crime',
-      coverImagePath: './coverImages/pulpFiciton.jpeg'
+      // coverImagePath: './coverImages/pulpFiciton.jpeg'
+      coverImagePath: 'pulpFiction'
+
     },
     {
       title: 'Kill Bill',
       releaseDate: 2007,
       type: 'comedy',
-      coverImagePath: './coverImages/killBill.jpeg'
+      // coverImagePath: './coverImages/killBill.jpeg'
+      coverImagePath: 'killBill'
     },
     {
       title: 'Pulp Ficiton',
       releaseDate: 1992,
       type: 'crime',
-      coverImagePath: './coverImages/pulpFiciton.jpeg'
+      // coverImagePath: './coverImages/pulpFiciton.jpeg'
+      coverImagePath: 'pulpFiction'
+
     },
     {
       title: 'Kill Bill',
       releaseDate: 2007,
       type: 'comedy',
-      coverImagePath: './coverImages/killBill.jpeg'
+      // coverImagePath: './coverImages/killBill.jpeg'
+      coverImagePath: 'killBill'
     }
   ])
 
