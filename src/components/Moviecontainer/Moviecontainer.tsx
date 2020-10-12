@@ -9,10 +9,24 @@ interface Props {
 }
 
 const Moviecontainer: React.FC<Props> = (props) => {
+
+  const selectType = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+    Array.from(e.currentTarget.children).forEach(elem => {
+      elem.classList.remove('current')
+    })
+
+    e.target.classList.add('current')
+
+  }
+
   return (
     <div className="moviecontainer">
       <header>
-        <div className="moviecontainer_typeSelector">
+        <div
+          className="moviecontainer_typeSelector"
+          onClick={(e: any) => selectType(e)}
+        >
           <div className="button button--slector current">All</div>
           <div className="button button--slector">Documentary</div>
           <div className="button button--slector">Comedy</div>
