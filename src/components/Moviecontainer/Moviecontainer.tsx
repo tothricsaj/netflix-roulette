@@ -28,7 +28,7 @@ const Moviecontainer: React.FC<Props> = (props) => {
           </label>
         </div>
       </header>
-      <div className="moviecontainer_resultCount">39 movie found</div>
+      <div className="moviecontainer_resultCount">{props.movieList.length} movie found</div>
       <div className="moviecontainer_movieList">
         {
           props.movieList.map((el, i) => {
