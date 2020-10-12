@@ -4,6 +4,12 @@ import './Moviecontainer.scss'
 import { Movie } from '../../common/types/movie';
 import App from '../../App';
 
+enum MovieTabs {
+  ALL = 'all',
+  DOCUMENTARY ='documentary',
+
+}
+
 interface Props {
     movieList: Movie[]
 }
@@ -16,7 +22,6 @@ const Moviecontainer: React.FC<Props> = (props) => {
       elem.classList.remove('current')
     })
 
-    e.target.classList.add('current')
 
   }
 
@@ -25,7 +30,6 @@ const Moviecontainer: React.FC<Props> = (props) => {
       <header>
         <div
           className="moviecontainer_typeSelector"
-          onClick={(e: any) => selectType(e)}
         >
           <div className="button button--slector current">All</div>
           <div className="button button--slector">Documentary</div>
