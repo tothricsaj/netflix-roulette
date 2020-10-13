@@ -1,14 +1,7 @@
 import * as React from 'react'
-import Movieitem from '../Movieitem/Movieitem';
+import Movieitem from '../Movieitem/Movieitem'
 import './Moviecontainer.scss'
-import { Movie } from '../../common/types/movie';
-import App from '../../App';
-
-enum MovieTabs {
-  ALL = 'all',
-  DOCUMENTARY ='documentary',
-
-}
+import { Movie } from '../../common/types/movie'
 
 interface Props {
     movieList: Movie[]
@@ -16,14 +9,24 @@ interface Props {
 
 const Moviecontainer: React.FC<Props> = (props) => {
 
-  const selectType = (e: React.MouseEvent<HTMLButtonElement>) => {
-
-    Array.from(e.currentTarget.children).forEach(elem => {
-      elem.classList.remove('current')
-    })
-
-
+  enum MovieTabs {
+    ALL = 'all',
+    DOCUMENTARY ='documentary',
+    COMEDY = 'comedy',
+    HORROR = 'horror',
+    CRIME = 'crime'
   }
+
+  const tabs = [
+    {id: MovieTabs.ALL, label: 'All'},
+    {id: MovieTabs.DOCUMENTARY, label: 'Documentary'},
+    {id: MovieTabs.COMEDY, label: 'Comendy'},
+    {id: MovieTabs.HORROR, label: 'Horror'},
+    {id: MovieTabs.CRIME, label: 'Crime'},
+  ]
+
+  const [currentTab, setCurrentTab] = React.useState<MovieTabs>(MovieTabs.ALL)
+
 
   return (
     <div className="moviecontainer">
@@ -31,17 +34,23 @@ const Moviecontainer: React.FC<Props> = (props) => {
         <div
           className="moviecontainer_typeSelector"
         >
-          <div className="button button--slector current">All</div>
-          <div className="button button--slector">Documentary</div>
-          <div className="button button--slector">Comedy</div>
-          <div className="button button--slector">Horror</div>
-          <div className="button button--slector">crime</div>
+          <div className="button button--selector current">All</div>
+          <div className="button button--selector">Documentary</div>
+          <div className="button button--selector">Comedy</div>
+          <div className="button button--selector">Horror</div>
+          <div className="button button--selector">crime</div>
+
+          {
+            tabs.map(movie => {
+              return <div className='button button--selector'>{movie.label}</div>
+            })
+          }
         </div>
         <div className="moviecontainer_sortSelector">
           <label htmlFor="sortSelector">
               sorted by
-              <select name="sortSelector" className="button button--slector">
-                  <option className="button button--slector">release date</option>
+              <select name="sortSelector" className="button button--selector">
+                  <option className="button button--selector">release date</option>
               </select>
           </label>
         </div>
