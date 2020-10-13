@@ -26,6 +26,19 @@ const Moviecontainer: React.FC<Props> = (props) => {
   ]
 
   const [currentTab, setCurrentTab] = React.useState<MovieTabs>(MovieTabs.ALL)
+  const [movieCounter, setMoiveCounter] = React.useState(0) // TODO(tothricsaj)
+  const [listedMovies, setListedMovies] = React.useState(props.movieList)
+
+  const setMoviesList = (id: any) => {
+    let tmpList = []
+
+    for(const movie of props.movieList) {
+      if(currentTab === movie.type || currentTab === 'all') tmpList.push(movie) 
+    }
+
+    setListedMovies(tmpList)
+    setCurrentTab(id)
+  }
 
 
   return (
@@ -35,15 +48,13 @@ const Moviecontainer: React.FC<Props> = (props) => {
           className="moviecontainer_typeSelector"
         >
           {
-            tabs.map(movie => {
-              let classes = 'button button--selector ' + (movie.id === currentTab ? 'current' : '')
-              return (<div 
-                className={classes}
-                onClick={() => setCurrentTab(movie.id)}
-               >
-                 {movie.label}
+            tabs.map(movie => (<div 
+                className={'button button--selector ' + (movie.id === currentTab ? 'current' : '')}
+                onClick={() => setMoviesList(movie.id)}
+              >
+                {movie.label}
               </div>)
-            })
+            )
           }
         </div>
         <div className="moviecontainer_sortSelector">
@@ -55,16 +66,9 @@ const Moviecontainer: React.FC<Props> = (props) => {
           </label>
         </div>
       </header>
-      <div className="moviecontainer_resultCount">{props.movieList.length} movie found</div>
+      <div className="moviecontainer_resultCount">{listedMovies.length} movie found</div>
       <div className="moviecontainer_movieList">
-        {
-          props.movieList.map((el, i) => {
-
-            return <Movieitem 
-              movie={el}
-            />
-          })
-        }
+        {listedMovies.map(el => <Movieitem movie={el} />)}
       </div>
     </div>
   )

@@ -36,6 +36,13 @@ function App() {
       type: 'comedy',
       // coverImagePath: './coverImages/killBill.jpeg'
       coverImagePath: 'killBill'
+    },
+    {
+      title: 'Test Docu',
+      releaseDate: 2007,
+      type: 'documentary',
+      // coverImagePath: './coverImages/killBill.jpeg'
+      coverImagePath: 'killBill'
     }
   ])
 
