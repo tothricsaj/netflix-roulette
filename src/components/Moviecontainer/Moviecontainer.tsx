@@ -26,7 +26,6 @@ const Moviecontainer: React.FC<Props> = (props) => {
   ]
 
   const [currentTab, setCurrentTab] = React.useState<MovieTabs>(MovieTabs.ALL)
-  const [movieCounter, setMoiveCounter] = React.useState(0) // TODO(tothricsaj)
   const [listedMovies, setListedMovies] = React.useState(props.movieList)
 
   const setMoviesList = (id: any) => {
@@ -37,9 +36,9 @@ const Moviecontainer: React.FC<Props> = (props) => {
     }
 
     setListedMovies(tmpList)
+    console.log(listedMovies)
     setCurrentTab(id)
   }
-
 
   return (
     <div className="moviecontainer">
