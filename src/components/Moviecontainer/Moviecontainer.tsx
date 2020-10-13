@@ -34,15 +34,15 @@ const Moviecontainer: React.FC<Props> = (props) => {
         <div
           className="moviecontainer_typeSelector"
         >
-          <div className="button button--selector current">All</div>
-          <div className="button button--selector">Documentary</div>
-          <div className="button button--selector">Comedy</div>
-          <div className="button button--selector">Horror</div>
-          <div className="button button--selector">crime</div>
-
           {
             tabs.map(movie => {
-              return <div className='button button--selector'>{movie.label}</div>
+              let classes = 'button button--selector ' + (movie.id === currentTab ? 'current' : '')
+              return (<div 
+                className={classes}
+                onClick={() => setCurrentTab(movie.id)}
+               >
+                 {movie.label}
+              </div>)
             })
           }
         </div>
