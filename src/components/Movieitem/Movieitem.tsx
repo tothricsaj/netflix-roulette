@@ -2,11 +2,11 @@ import * as React from 'react'
 import './Movieitem.scss'
 import { Movie } from '../../common/types/movie';
 
-interface Props {
+interface MovieItemProps {
     movie: Movie
 }
 
-const Movieitem: React.FC<Props> = (props) => {
+const Movieitem = (props: MovieItemProps) => {
   const classNameWithImg = `movieitem_coverImage ${props.movie.coverImagePath}`
 
   return (

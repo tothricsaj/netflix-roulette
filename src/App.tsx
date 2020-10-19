@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.scss';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 import Header from './components/Header/Header'
-import Moviecontainer from './components/Moviecontainer/Moviecontainer';
+import MovieContainer from './components/Moviecontainer/Moviecontainer';
 import {Movie} from './common/types/movie'
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
     <ErrorBoundary>
       <div className="App">
           <Header />
-          <Moviecontainer 
+          <MovieContainer 
             movieList={movieList}
           />
       </div>

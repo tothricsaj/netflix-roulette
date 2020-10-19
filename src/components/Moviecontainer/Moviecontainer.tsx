@@ -2,30 +2,15 @@ import * as React from 'react'
 import Movieitem from '../Movieitem/Movieitem'
 import './Moviecontainer.scss'
 import { Movie } from '../../common/types/movie'
+import {MOVIE_TABS, TABS} from './constants'
 
-interface Props {
+interface MovieContainerProps {
     movieList: Movie[]
 }
 
-const Moviecontainer: React.FC<Props> = (props) => {
+const Moviecontainer = (props: MovieContainerProps) => {
 
-  enum MovieTabs {
-    ALL = 'all',
-    DOCUMENTARY ='documentary',
-    COMEDY = 'comedy',
-    HORROR = 'horror',
-    CRIME = 'crime'
-  }
-
-  const tabs = [
-    {id: MovieTabs.ALL, label: 'All'},
-    {id: MovieTabs.DOCUMENTARY, label: 'Documentary'},
-    {id: MovieTabs.COMEDY, label: 'Comendy'},
-    {id: MovieTabs.HORROR, label: 'Horror'},
-    {id: MovieTabs.CRIME, label: 'Crime'},
-  ]
-
-  const [currentTab, setCurrentTab] = React.useState<MovieTabs>(MovieTabs.ALL)
+  const [currentTab, setCurrentTab] = React.useState<MOVIE_TABS>(MOVIE_TABS.ALL)
   const [listedMovies, setListedMovies] = React.useState(props.movieList)
 
   const setMoviesList = (id: any) => setCurrentTab(id)
@@ -34,7 +19,7 @@ const Moviecontainer: React.FC<Props> = (props) => {
     let tmpList = []
 
     for(const movie of props.movieList) {
-      if(currentTab === movie.type || currentTab === 'all') tmpList.push(movie) 
+      if(currentTab === movie.type || currentTab === MOVIE_TABS.ALL) tmpList.push(movie) 
     }
 
     setListedMovies(tmpList)
@@ -47,7 +32,7 @@ const Moviecontainer: React.FC<Props> = (props) => {
           className="moviecontainer_typeSelector"
         >
           {
-            tabs.map(movie => (<div 
+            TABS.map(movie => (<div 
                 className={'button button--selector ' + (movie.id === currentTab ? 'current' : '')}
                 onClick={() => setMoviesList(movie.id)}
               >

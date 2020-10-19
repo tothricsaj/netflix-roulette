@@ -1,11 +1,11 @@
 import * as React from 'react'
 import './Header.scss'
 
-interface Props {
+interface HeaderProps {
 
 }
 
-const Header: React.FC<Props> = (props) => {
+const Header = (props: HeaderProps) => {
   return (
     <div className="header">
       <div className="header_cover">
