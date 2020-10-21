@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.header_cover {
+.header__cover {
   @include absolute-to-top-left;
 
   width: 100%;
@@ -17,7 +17,7 @@
   z-index: -1;
 }
 
-.header_cover--black {
+.header__cover--black {
   @include absolute-to-top-left;
 
   width: 100%;
@@ -25,7 +25,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.header_logo {
+.header__logo {
   @include absolute-by-argument(20px, unset, unset, 60px);
 
   color: $magentaPink;
@@ -33,13 +33,13 @@
   span {font-weight: bold;}
 }
 
-.header_addMovieButton {
+.header__addMovieButton {
   @include absolute-by-argument(20px, 60px);
 
   color: $magentaPink;
 }
 
-.header_searchWrapper {
+.header__searchWrapper {
   width: 80%;
   height: 100%;
   margin: auto;
@@ -56,7 +56,7 @@
   }
 }
 
-.header_searchWrapper_inputContainer {
+.header__searchWrapper__inputContainer {
   width: 100%;
   display: flex;
   justify-content: center;

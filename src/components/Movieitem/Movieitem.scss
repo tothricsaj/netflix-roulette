@@ -17,14 +17,14 @@
     &:hover .dotIcon {display: block;}
 }
 
-.movieitem_coverImage {
+.movieitem__coverImage {
     width: 100%;
     height: 400px;
     background-position: center;
     background-size: contain;
 }
 
-.movieitem_infoBox {
+.movieitem__infoBox {
   width: 100%;
   margin-top: 10px;
   display: grid;

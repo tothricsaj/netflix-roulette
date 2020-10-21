@@ -29,7 +29,7 @@ export const MovieContainer = (props: MovieContainerProps) => {
     <div className="moviecontainer">
       <header>
         <div
-          className="moviecontainer_typeSelector"
+          className="moviecontainer__typeSelector"
         >
           {
             TABS.map(movie => (<div 
@@ -41,7 +41,7 @@ export const MovieContainer = (props: MovieContainerProps) => {
             )
           }
         </div>
-        <div className="moviecontainer_sortSelector">
+        <div className="moviecontainer__sortSelector">
           <label htmlFor="sortSelector">
               sorted by
               <select name="sortSelector" className="button button--selector">
@@ -50,8 +50,8 @@ export const MovieContainer = (props: MovieContainerProps) => {
           </label>
         </div>
       </header>
-      <div className="moviecontainer_resultCount">{listedMovies.length} movie found</div>
-      <div className="moviecontainer_movieList">
+      <div className="moviecontainer__resultCount">{listedMovies.length} movie found</div>
+      <div className="moviecontainer__movieList">
         {listedMovies.map(el => <Movieitem movie={el} />)}
       </div>
     </div>

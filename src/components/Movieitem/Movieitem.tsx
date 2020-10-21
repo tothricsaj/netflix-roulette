@@ -7,7 +7,7 @@ interface MovieItemProps {
 }
 
 export const Movieitem = (props: MovieItemProps) => {
-  const classNameWithImg = `movieitem_coverImage ${props.movie.coverImagePath}`
+  const classNameWithImg = `movieitem__coverImage ${props.movie.coverImagePath}`
 
   return (
     <div className="movieitem">
@@ -15,7 +15,7 @@ export const Movieitem = (props: MovieItemProps) => {
       <div 
         className={classNameWithImg}
       ></div>
-      <div className="movieitem_infoBox">
+      <div className="movieitem__infoBox">
         <p className="title">{props.movie.title}</p>
         <p className="releaseDate">{props.movie.releaseDate}</p>
         <p className="movieType">{props.movie.type}</p>

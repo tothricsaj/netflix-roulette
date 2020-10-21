@@ -8,24 +8,24 @@ interface HeaderProps {
 export const Header = (props: HeaderProps) => {
   return (
     <div className="header">
-      <div className="header_cover">
-        <div className="header_cover--black"></div>
+      <div className="header__cover">
+        <div className="header__cover--black"></div>
       </div>
-      <p className="header_logo">
+      <p className="header__logo">
         <span>netflix</span>roulette
       </p>
 
-      <button className="button button--grey header_addMovieButton">+ add movie</button>
+      <button className="button button--grey header__addMovieButton">+ add movie</button>
 
-      <div className="header_searchWrapper">
-        <h2 className="header_title">Find your movie</h2>
-        <div className="header_searchWrapper_inputContainer">
+      <div className="header__searchWrapper">
+        <h2 className="header__title">Find your movie</h2>
+        <div className="header__searchWrapper__inputContainer">
           <input
-            className="header_input input input--darkGrey"
+            className="input header__input input--darkGrey"
             type="text"
             placeholder="What do you want to watch?" />
 
-          <button className="button button--magenta header_searchButton">
+          <button className="button button--magenta header__searchButton">
             Search
           </button>
           </div>

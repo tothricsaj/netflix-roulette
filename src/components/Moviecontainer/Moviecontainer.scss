@@ -16,21 +16,21 @@
     }
 }
 
-.moviecontainer_resultCount {
+.moviecontainer__resultCount {
   margin: 20px 0;
   color: white;
   font-weight: bold;
   float: left;
 }
 
-.moviecontainer_movieList {
+.moviecontainer__movieList {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.moviecontainer_typeSelector {
+.moviecontainer__typeSelector {
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
   }
 }
 
-.moviecontainer_sortSelector {
+.moviecontainer__sortSelector {
   width: 40%;
   display: flex;
   justify-content: flex-end;
