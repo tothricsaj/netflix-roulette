@@ -5,7 +5,7 @@ interface HeaderProps {
 
 }
 
-const Header = (props: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
   return (
     <div className="header">
       <div className="header_cover">
@@ -33,5 +33,3 @@ const Header = (props: HeaderProps) => {
     </div>
   )
 }
-
-export default Header

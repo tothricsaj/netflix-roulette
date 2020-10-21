@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Movieitem from '../Movieitem/Movieitem'
+import { Movieitem } from '../Movieitem/Movieitem'
 import './Moviecontainer.scss'
 import { Movie } from '../../common/types/movie'
 import {MOVIE_TABS, TABS} from './constants'
@@ -8,7 +8,7 @@ interface MovieContainerProps {
     movieList: Movie[]
 }
 
-const Moviecontainer = (props: MovieContainerProps) => {
+export const MovieContainer = (props: MovieContainerProps) => {
 
   const [currentTab, setCurrentTab] = React.useState<MOVIE_TABS>(MOVIE_TABS.ALL)
   const [listedMovies, setListedMovies] = React.useState(props.movieList)
@@ -57,5 +57,3 @@ const Moviecontainer = (props: MovieContainerProps) => {
     </div>
   )
 }
-
-export default Moviecontainer

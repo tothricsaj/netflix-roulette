@@ -6,7 +6,7 @@ interface MovieItemProps {
     movie: Movie
 }
 
-const Movieitem = (props: MovieItemProps) => {
+export const Movieitem = (props: MovieItemProps) => {
   const classNameWithImg = `movieitem_coverImage ${props.movie.coverImagePath}`
 
   return (
@@ -23,5 +23,3 @@ const Movieitem = (props: MovieItemProps) => {
     </div>
   )
 }
-
-export default Movieitem
