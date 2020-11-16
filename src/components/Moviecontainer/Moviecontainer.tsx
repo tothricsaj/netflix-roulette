@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Movieitem } from '../Movieitem/Movieitem'
-import './Moviecontainer.scss'
+// import './Moviecontainer.scss'
+import style from './Moviecontainer.module.scss'
 import { Movie } from '../../common/types/movie'
 import {MOVIE_TABS, TABS} from './constants'
 
@@ -26,10 +27,10 @@ export const MovieContainer = (props: MovieContainerProps) => {
   }, [currentTab])
 
   return (
-    <div className="moviecontainer">
+    <div className={style.moviecontainer}>
       <header>
         <div
-          className="moviecontainer__typeSelector"
+          className={style.moviecontainer__typeSelector}
         >
           {
             TABS.map(movie => (<div 
@@ -41,7 +42,7 @@ export const MovieContainer = (props: MovieContainerProps) => {
             )
           }
         </div>
-        <div className="moviecontainer__sortSelector">
+        <div className={style.moviecontainer__sortSelector}>
           <label htmlFor="sortSelector">
               sorted by
               <select name="sortSelector" className="button button--selector">
@@ -50,8 +51,8 @@ export const MovieContainer = (props: MovieContainerProps) => {
           </label>
         </div>
       </header>
-      <div className="moviecontainer__resultCount">{listedMovies.length} movie found</div>
-      <div className="moviecontainer__movieList">
+      <div className={style.moviecontainer__resultCount}>{listedMovies.length} movie found</div>
+      <div className={style.moviecontainer__movieList}>
         {listedMovies.map(el => <Movieitem movie={el} />)}
       </div>
     </div>
