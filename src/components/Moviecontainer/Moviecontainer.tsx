@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { Movieitem } from '../Movieitem/Movieitem'
-// import './Moviecontainer.scss'
 import style from './Moviecontainer.module.scss'
 import { Movie } from '../../common/types/movie'
 import {MOVIE_TABS, TABS} from './constants'
+import cn from 'classnames/bind';
+
+const cx = cn.bind(style)
 
 interface MovieContainerProps {
     movieList: Movie[]
@@ -34,7 +36,12 @@ export const MovieContainer = (props: MovieContainerProps) => {
         >
           {
             TABS.map(movie => (<div 
-                className={'button button--selector ' + (movie.id === currentTab ? 'current' : '')}
+                className={cx({
+                  button: true,
+                  [`button--selector`]: true,
+                  current: movie.id === currentTab
+                })}
+
                 onClick={() => setMoviesList(movie.id)}
               >
                 {movie.label}
