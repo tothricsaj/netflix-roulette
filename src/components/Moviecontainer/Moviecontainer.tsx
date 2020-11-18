@@ -2,20 +2,9 @@ import * as React from 'react'
 import { Movieitem } from '../Movieitem/Movieitem'
 import style from './Moviecontainer.module.scss'
 import { Movie } from '../../common/types/movie'
-import {MOVIE_TABS, TABS} from './constants'
+import { MOVIE_TABS, TABS, BUTTON_ACCENT } from './constants'
+import { buttonCssClass } from '../../common/functions/cssFunctions'
 import cn from 'classnames/bind';
-
-enum ACCENT {
-  SELECTOR = 'selector',
-  MAGENTA = 'magenta',
-  GREY = 'grey'
-}
-
-type ButtonProps = {
-  accent?: 'selector'|'magenta'|'grey'
-}
-
-const buttonCssClass = ({accent}: ButtonProps) => (accent ? `button--${accent }`: 'button')
 
 const cx = cn.bind(style)
 
@@ -49,7 +38,7 @@ export const MovieContainer = (props: MovieContainerProps) => {
           {
             TABS.map((movie, i) => (<div 
                 className={cx({
-                  [`${buttonCssClass({accent:ACCENT.SELECTOR})}`]: true,
+                  [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true,
                   current: movie.id === currentTab
                 })}
                 onClick={() => setMoviesList(movie.id)}
@@ -65,10 +54,10 @@ export const MovieContainer = (props: MovieContainerProps) => {
               <select 
                 name="sortSelector"
                 className={cx({
-                  [`${buttonCssClass({accent:ACCENT.SELECTOR})}`]: true
+                  [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true
                 })}
               >
-                  <option className={cx({[`${buttonCssClass({accent:ACCENT.SELECTOR})}`]: true})}>release date</option>
+                  <option className={cx({[`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true})}>release date</option>
               </select>
           </label>
         </div>

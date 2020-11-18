@@ -13,3 +13,9 @@ export const TABS = [
   {id: MOVIE_TABS.HORROR, label: 'Horror'},
   {id: MOVIE_TABS.CRIME, label: 'Crime'},
 ]
+
+export enum BUTTON_ACCENT {
+  SELECTOR = 'selector',
+  MAGENTA = 'magenta',
+  GREY = 'grey'
+}
