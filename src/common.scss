@@ -10,15 +10,18 @@
 }
 
 .button--magenta {
+    @extend .button;
     background-color: $magentaPink;
     color: white;
 }
 
 .button--grey {
+    @extend .button;
     background-color: $grey1;
 }
 
 .button--selector {
+    @extend .button;
     background-color: transparent;
     font-weight: normal;
     color: white;
@@ -33,6 +36,7 @@
 }
 
 .input--dark-grey {
+    @extend .input;
     background-color: $darkGrey;
 }
 

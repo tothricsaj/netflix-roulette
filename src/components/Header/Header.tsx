@@ -32,7 +32,6 @@ export const Header = (props: HeaderProps) => {
         <div className={style.header__searchWrapper__inputContainer}>
           <input
             className={cx({
-              input: true,
               header__input: true,
               [`input--dark-grey`]: true
             })}
