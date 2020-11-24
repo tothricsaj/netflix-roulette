@@ -1,2 +1,2 @@
-export type ButtonProps = 'selector'|'magenta'|'grey'
-export type InputProps = 'dark-grey'
+export type ButtonAccent = 'selector'|'magenta'|'grey'
+export type InputAccent = 'dark-grey'
