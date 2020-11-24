@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './Movieitem.scss'
-import { Movie } from '../../common/types/movie';
+import { Movie } from '../../common/movie/movie';
 
 interface MovieItemProps {
     movie: Movie

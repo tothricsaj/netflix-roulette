@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Movieitem } from '../Movieitem/Movieitem'
 import style from './Moviecontainer.module.scss'
-import { Movie } from '../../common/types/movie'
+import { Movie } from '../../common/movie/movie'
 import { MOVIE_TABS, TABS, BUTTON_ACCENT } from './constants'
-import { buttonCssClass } from '../../common/functions/cssFunctions'
+import { buttonCssClass } from '../../common/style/style'
 import cn from 'classnames/bind';
 
 const cx = cn.bind(style)

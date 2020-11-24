@@ -3,7 +3,7 @@ import './App.scss';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 import { Header } from './components/Header/Header'
 import { MovieContainer } from './components/Moviecontainer/Moviecontainer';
-import {Movie} from './common/types/movie'
+import {Movie} from './common/movie/movie'
 
 function App() {
   const [movieList, setMovieList] = useState<Movie[]>([
