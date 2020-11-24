@@ -1,9 +1,19 @@
 import * as React from 'react'
 import cn from 'classnames/bind';
 import style from './Header.module.scss'
+import {ButtonAccent} from '../../common/style/style'
 
 
 const cx = cn.bind(style)
+
+interface ButtonProps {
+  accent?: ButtonAccent,
+  btnTxt: string,
+}
+
+const Button = ({accent, btnTxt}: ButtonProps) => (
+<button className={cx(accent ? `button--${accent}` : 'button')}>{btnTxt}</button>
+)
 
 interface HeaderProps {
 
@@ -12,6 +22,7 @@ interface HeaderProps {
 export const Header = (props: HeaderProps) => {
   return (
     <div className={style.header}>
+      <Button accent='magenta' btnTxt='Jó a tested baby' />
       <div className={style.header__cover}>
         <div className={cx({
           [`header__cover--black`]: true
