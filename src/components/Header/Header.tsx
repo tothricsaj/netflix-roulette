@@ -12,11 +12,11 @@ interface ButtonProps {
   additionalClasses?: string[]
 }
 
-const Button = ({btnTxt, accent, additionalClasses: extendedClasses}: ButtonProps) => (
+const Button = ({btnTxt, accent, additionalClasses}: ButtonProps) => (
   <button className={
     cx(
       accent ? `button--${accent}` : 'button',
-      extendedClasses
+      additionalClasses
     )}
   >{btnTxt}</button>
 )
