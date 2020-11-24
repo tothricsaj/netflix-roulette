@@ -35,6 +35,9 @@ export const MovieContainer = (props: MovieContainerProps) => {
         <div
           className={style.moviecontainer__typeSelector}
         >
+        {/*
+        TODO(tothricsaj): Make an individual Tablist component!
+        */}
           {
             TABS.map((movie, i) => (<div 
                 className={cx({

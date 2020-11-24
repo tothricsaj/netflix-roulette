@@ -9,11 +9,16 @@ const cx = cn.bind(style)
 interface ButtonProps {
   btnTxt: string,
   accent?: ButtonAccent,
-  extendedClasses?: string[]
+  additionalClasses?: string[]
 }
 
-const Button = ({btnTxt, accent, extendedClasses}: ButtonProps) => (
-<button className={cx(accent ? `button--${accent}` : 'button', extendedClasses)}>{btnTxt}</button>
+const Button = ({btnTxt, accent, additionalClasses: extendedClasses}: ButtonProps) => (
+  <button className={
+    cx(
+      accent ? `button--${accent}` : 'button',
+      extendedClasses
+    )}
+  >{btnTxt}</button>
 )
 
 interface HeaderProps {
@@ -35,7 +40,7 @@ export const Header = (props: HeaderProps) => {
       <Button 
         btnTxt='+ add movie'
         accent="grey"
-        extendedClasses={['header__addMovieButton']} />
+        additionalClasses={['header__addMovieButton']} />
 
       <div className={style.header__searchWrapper}>
         <h2 className={style.header__title}>Find your movie</h2>
@@ -51,7 +56,7 @@ export const Header = (props: HeaderProps) => {
           <Button
            btnTxt='search'
            accent='magenta'
-           extendedClasses={['header__searchButton']} />
+           additionalClasses={['header__searchButton']} />
 
         </div>
       </div>
