@@ -8,6 +8,31 @@ import cn from 'classnames/bind';
 
 const cx = cn.bind(style)
 
+interface TablistPorps {
+  tabs: {id: string, label: string}[],
+  setTab: Function,
+  currentTab: string,
+  additionalClasses?: string[]
+}
+
+const Tablist = ({tabs, setTab, currentTab, additionalClasses}: TablistPorps) => {
+  return (
+    <div className={cx(additionalClasses)}>
+      {
+        tabs.map((movie, i) => (<div
+          className={cx({
+            [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true,
+            current: movie.id === currentTab
+          })}
+          onClick={() => setTab(movie.id)}
+        >
+          {movie.label}
+        </div>)
+      )}
+    </div>
+  )
+}
+
 interface MovieContainerProps {
     movieList: Movie[]
 }
@@ -32,25 +57,12 @@ export const MovieContainer = (props: MovieContainerProps) => {
   return (
     <div className={style.moviecontainer}>
       <header>
-        <div
-          className={style.moviecontainer__typeSelector}
-        >
-        {/*
-        TODO(tothricsaj): Make an individual Tablist component!
-        */}
-          {
-            TABS.map((movie, i) => (<div 
-                className={cx({
-                  [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true,
-                  current: movie.id === currentTab
-                })}
-                onClick={() => setMoviesList(movie.id)}
-              >
-                {movie.label}
-              </div>)
-            )
-          }
-        </div>
+          <Tablist
+            tabs={TABS}
+            setTab={setMoviesList}
+            currentTab={currentTab}
+            additionalClasses={[style.moviecontainer__typeSelector]}
+          />
         <div className={style.moviecontainer__sortSelector}>
           <label htmlFor="sortSelector">
               sorted by
