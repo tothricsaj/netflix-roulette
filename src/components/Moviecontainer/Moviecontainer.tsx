@@ -3,7 +3,7 @@ import { Movieitem } from '../Movieitem/Movieitem'
 import style from './Moviecontainer.module.scss'
 import { Movie } from '../../common/movie/movie'
 import { MOVIE_TABS, TABS, BUTTON_ACCENT } from './constants'
-import { buttonCssClass } from '../../common/style/style'
+import { cssWithAccent } from '../../common/style/style'
 import cn from 'classnames/bind';
 
 const cx = cn.bind(style)
@@ -21,7 +21,7 @@ const Tablist = ({tabs, setTab, currentTab, additionalClasses}: TablistPorps) =>
       {
         tabs.map((movie, i) => (<div
           className={cx({
-            [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true,
+            [`${cssWithAccent('button', BUTTON_ACCENT.SELECTOR)}`]: true,
             current: movie.id === currentTab
           })}
           onClick={() => setTab(movie.id)}
@@ -69,10 +69,10 @@ export const MovieContainer = (props: MovieContainerProps) => {
               <select 
                 name="sortSelector"
                 className={cx({
-                  [`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true
+                  [`${cssWithAccent('button', BUTTON_ACCENT.SELECTOR)}`]: true
                 })}
               >
-                  <option className={cx({[`${buttonCssClass(BUTTON_ACCENT.SELECTOR)}`]: true})}>release date</option>
+                  <option className={cx({[`${cssWithAccent('button', BUTTON_ACCENT.SELECTOR)}`]: true})}>release date</option>
               </select>
           </label>
         </div>

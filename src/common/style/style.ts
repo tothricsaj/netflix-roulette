@@ -1,4 +1,4 @@
 export type ButtonAccent = 'selector'|'magenta'|'grey'
 export type InputAccent = 'dark-grey'
 
-export const buttonCssClass = (accent?: ButtonAccent) => (accent ? `button--${accent }`: 'button')
+export const cssWithAccent = (base:string, accent?: ButtonAccent) => (accent ? `${base}--${accent }`: base)
