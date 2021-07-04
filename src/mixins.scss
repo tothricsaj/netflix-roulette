@@ -1,0 +1,13 @@
+@mixin absolute-to-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin absolute-by-argument($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}

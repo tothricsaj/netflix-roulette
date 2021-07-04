@@ -1,0 +1,54 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.moviecontainer {
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    padding: 20px;
+    background-color: $darkGrey;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $grey2;
+    }
+}
+
+.moviecontainer__resultCount {
+  margin: 20px 0;
+  color: white;
+  font-weight: bold;
+  float: left;
+}
+
+.moviecontainer__movieList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.moviecontainer__typeSelector {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .current {
+    border-bottom: 3px solid $magentaPink;
+  }
+}
+
+.moviecontainer__sortSelector {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  label {
+  color: $grey2;
+  text-transform: uppercase;
+  }
+}

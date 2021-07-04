@@ -1,0 +1,74 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.header {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.header__cover {
+  @include absolute-to-top-left;
+
+  width: 100%;
+  height: 100%;
+  background-image: url(moviecover.jpeg);
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.header__cover--black {
+  @include absolute-to-top-left;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header__logo {
+  @include absolute-by-argument(20px, unset, unset, 60px);
+
+  color: $magentaPink;
+
+  span {font-weight: bold;}
+}
+
+.header__addMovieButton {
+  @include absolute-by-argument(20px, 60px);
+
+  color: $magentaPink;
+}
+
+.header__searchWrapper {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+  }
+}
+
+.header__searchWrapper__inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: calc(80% - 10px);
+    margin-right: 10px;
+  }
+
+  button {
+    width: 20%;
+    height: 35px;
+  }
+}
